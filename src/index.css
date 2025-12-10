@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+/*
+  Global Color Theme
+  Edit these CSS custom properties to change the entire site's color scheme
+*/
+:root {
+  /* Primary colors */
+  --color-primary: #0f172a;       /* slate-900 - main text */
+  --color-secondary: #334155;     /* slate-700 - secondary text */
+  --color-muted: #64748b;         /* slate-500 - muted text */
+
+  /* Background colors */
+  --color-bg: #ffffff;            /* white - main background */
+  --color-bg-alt: #f8fafc;        /* slate-50 - alternate background */
+  --color-bg-card: #ffffff;       /* white - card background */
+
+  /* Accent colors */
+  --color-accent: #0ea5e9;        /* sky-500 - links, highlights */
+  --color-accent-hover: #0284c7;  /* sky-600 - hover state */
+
+  /* Border colors */
+  --color-border: #e2e8f0;        /* slate-200 - borders */
+  --color-border-hover: #cbd5e1;  /* slate-300 - border hover */
+}
+
+/* Dark mode */
+.dark {
+  --color-primary: #f1f5f9;       /* slate-100 - main text */
+  --color-secondary: #cbd5e1;     /* slate-300 - secondary text */
+  --color-muted: #94a3b8;         /* slate-400 - muted text */
+
+  --color-bg: #0f172a;            /* slate-900 - main background */
+  --color-bg-alt: #1e293b;        /* slate-800 - alternate background */
+  --color-bg-card: #1e293b;       /* slate-800 - card background */
+
+  --color-accent: #38bdf8;        /* sky-400 - links, highlights */
+  --color-accent-hover: #7dd3fc;  /* sky-300 - hover state */
+
+  --color-border: #334155;        /* slate-700 - borders */
+  --color-border-hover: #475569;  /* slate-600 - border hover */
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-muted: var(--color-muted);
+  --color-bg: var(--color-bg);
+  --color-bg-alt: var(--color-bg-alt);
+  --color-bg-card: var(--color-bg-card);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-border: var(--color-border);
+  --color-border-hover: var(--color-border-hover);
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+@keyframes fade-in-local {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-local {
+  animation: fade-in-local 0.15s ease-out;
+}
