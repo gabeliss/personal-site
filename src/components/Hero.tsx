@@ -74,14 +74,14 @@ export default function Hero() {
         {/* Bio */}
         <div className="text-lg text-[--color-secondary] max-w-xl mx-auto mb-10 leading-relaxed space-y-4 text-center">
           <p>
-            I'm a software engineer with a passion for building great user experiences. Currently at Expedia working on internal observability systems.
+            I'm a software engineer with a passion for building great user experiences. I am currently at Expedia working on internal observability systems.
           </p>
           <p>
-            Outside of work, I love building passion projects and learning new technologies.
+            Outside of my job, I love working on side projects and learning new technologies.
             I also enjoy playing tennis, basketball, or anything that will get me outside.
           </p>
           <p>
-            Always looking for new opportunities to connect, please feel free to reach out.
+            I am always looking for new opportunities to connect, please feel free to reach out.
           </p>
         </div>
 
