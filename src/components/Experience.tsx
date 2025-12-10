@@ -73,7 +73,7 @@ export default function Experience() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[--color-accent] mt-0.5">-</span>
-                  Built ~5,500 lines of TypeScript/React UI with URL-based state management for
+                  Built TypeScript/React UI with URL-based state management for
                   shareable, deep-linkable searches
                 </li>
                 <li className="flex items-start gap-2">
