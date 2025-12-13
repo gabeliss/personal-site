@@ -29,8 +29,8 @@ export default function Hero() {
   const expediaTenure = useExpediaTenure();
 
   return (
-    <section className="min-h-[90vh] flex items-center justify-center px-6 py-20">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="min-h-[90vh] flex items-center justify-center px-8 py-20">
+      <div className="w-full max-w-4xl mx-auto text-center">
         {/* Profile Image */}
         <div className="mb-8">
           <div className="relative w-36 h-36 mx-auto group">
@@ -86,7 +86,7 @@ export default function Hero() {
         </div>
 
         {/* Social Links */}
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-4">
           <a
             href="https://github.com/gabeliss"
             target="_blank"

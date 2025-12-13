@@ -3,7 +3,7 @@ import AnimatedSection from './AnimatedSection';
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 px-6">
+    <section id="experience" className="py-20 px-8">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-[--color-primary] mb-12 text-center">
           Experience
