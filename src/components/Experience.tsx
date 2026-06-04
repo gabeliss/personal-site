@@ -105,7 +105,7 @@ export default function Experience() {
                 Datadog On-Call Integration
               </h4>
               <p className="text-[--color-secondary] leading-relaxed">
-                Led a large part of the migration from PagerData to Datadog On-Call for Expedia's
+                Led a large part of the migration from PagerDuty to Datadog On-Call for Expedia's
                 incident routing workflows, integrating automated escalation into the event management system.
               </p>
             </div>
