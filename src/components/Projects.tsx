@@ -23,7 +23,7 @@ const projects: Project[] = [
     description:
       'In-progress full-stack platform for defining brand context, composing reusable AI workflows on a node canvas, running automations, storing artifacts, and connecting generation providers to publishing workflows.',
     tech: ['React', 'TypeScript', 'React Flow', 'Convex', 'Clerk', 'AI Providers'],
-    image: '/images/content-engine.svg',
+    image: '/images/content-engine.png',
     links: {},
     highlights: [
       'Typed workflow graph with port validation, execution state, and run debugging',
