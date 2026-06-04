@@ -18,6 +18,21 @@ interface Project {
 
 const projects: Project[] = [
   {
+    name: 'Content Engine',
+    tagline: 'AI workflow studio for content automation',
+    description:
+      'In-progress full-stack platform for defining brand context, composing reusable AI workflows on a node canvas, running automations, storing artifacts, and connecting generation providers to publishing workflows.',
+    tech: ['React', 'TypeScript', 'React Flow', 'Convex', 'Clerk', 'AI Providers'],
+    image: '/images/content-engine.svg',
+    links: {},
+    highlights: [
+      'Typed workflow graph with port validation, execution state, and run debugging',
+      'Provider abstractions for AI generation, publishing, model metadata, and async jobs',
+      'MCP-style agent tools for inspecting, editing, validating, and running workflows',
+      'Product architecture across identity, assets, workflows, artifacts, and metrics',
+    ],
+  },
+  {
     name: 'Rewinded',
     tagline: 'Transform your camera roll into shareable visual stories',
     description:
@@ -105,7 +120,7 @@ export default function Projects() {
           Projects
         </h2>
         <p className="text-[--color-muted] text-center mb-12 max-w-2xl mx-auto">
-          Lately I've been into consumer mobile apps.
+          Selected full-stack, AI, and mobile projects built outside work.
         </p>
 
         <div className="space-y-16">

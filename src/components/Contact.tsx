@@ -8,8 +8,8 @@ export default function Contact() {
           Let's Connect
         </h2>
         <p className="text-[--color-secondary] mb-8 leading-relaxed">
-          I'm always interested in hearing about new opportunities,
-          especially at early-stage startups where I can make a real impact.
+          I'm looking for software engineering roles where I can own ambitious product and infrastructure work,
+          especially in New York City or remote.
         </p>
 
         {/* Email CTA */}

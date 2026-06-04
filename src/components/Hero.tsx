@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { FileText, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 function useExpediaTenure() {
@@ -50,14 +50,14 @@ export default function Hero() {
 
         {/* Tagline */}
         <p className="text-xl md:text-2xl text-[--color-secondary] mb-4 font-medium">
-          Software Engineer
+          Software Development Engineer II at Expedia
         </p>
 
         {/* Location, Education & Tenure */}
         <div className="flex flex-wrap items-center justify-center gap-4 text-[--color-muted] mb-8">
           <span className="flex items-center gap-1">
             <MapPin size={16} />
-            Chicago, IL
+            NYC or Remote
           </span>
           <span className="hidden sm:inline text-[--color-border]">|</span>
           <span className="flex items-center gap-2">
@@ -74,19 +74,27 @@ export default function Hero() {
         {/* Bio */}
         <div className="text-lg text-[--color-secondary] max-w-xl mx-auto mb-10 leading-relaxed space-y-4 text-center">
           <p>
-            I'm a software engineer with a passion for building great user experiences. I am currently at Expedia working on internal observability systems.
+            I build full-stack product and platform systems, from incident search and observability tools at Expedia to AI-enabled products outside work.
           </p>
           <p>
-            Outside of my job, I love working on side projects and learning new technologies.
-            I also enjoy playing tennis, basketball, or anything that will get me outside.
+            I care about complex interfaces, fast-moving teams, and owning work across the product, frontend, backend, and infrastructure.
           </p>
           <p>
-            I am always looking for new opportunities to connect, please feel free to reach out.
+            I am currently looking for software engineering roles in New York City or remote.
           </p>
         </div>
 
         {/* Social Links */}
         <div className="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/resume/gabriel_liss_resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[--color-border] text-[--color-primary] hover:border-[--color-border-hover] hover:bg-[--color-bg-alt] transition-colors"
+          >
+            <FileText size={20} />
+            Resume
+          </a>
           <a
             href="https://github.com/gabeliss"
             target="_blank"

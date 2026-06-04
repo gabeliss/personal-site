@@ -1,0 +1,30 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="640" rx="48" fill="#101827"/>
+  <rect x="72" y="88" width="496" height="464" rx="28" fill="#162033" stroke="#334155" stroke-width="2"/>
+  <rect x="112" y="132" width="170" height="84" rx="18" fill="#0EA5E9"/>
+  <rect x="352" y="132" width="128" height="84" rx="18" fill="#F59E0B"/>
+  <rect x="112" y="304" width="142" height="84" rx="18" fill="#22C55E"/>
+  <rect x="360" y="304" width="168" height="84" rx="18" fill="#A855F7"/>
+  <rect x="220" y="468" width="188" height="64" rx="18" fill="#E2E8F0"/>
+  <path d="M282 174H352" stroke="#CBD5E1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M416 216V304" stroke="#CBD5E1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M254 346H360" stroke="#CBD5E1" stroke-width="10" stroke-linecap="round"/>
+  <path d="M320 388V468" stroke="#CBD5E1" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="282" cy="174" r="14" fill="#E2E8F0"/>
+  <circle cx="352" cy="174" r="14" fill="#E2E8F0"/>
+  <circle cx="416" cy="216" r="14" fill="#E2E8F0"/>
+  <circle cx="416" cy="304" r="14" fill="#E2E8F0"/>
+  <circle cx="254" cy="346" r="14" fill="#E2E8F0"/>
+  <circle cx="360" cy="346" r="14" fill="#E2E8F0"/>
+  <circle cx="320" cy="388" r="14" fill="#E2E8F0"/>
+  <circle cx="320" cy="468" r="14" fill="#E2E8F0"/>
+  <text x="140" y="166" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Prompt</text>
+  <text x="140" y="192" fill="#E0F2FE" font-family="Inter, Arial, sans-serif" font-size="14">brand context</text>
+  <text x="382" y="166" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Model</text>
+  <text x="382" y="192" fill="#1F2937" font-family="Inter, Arial, sans-serif" font-size="14">provider</text>
+  <text x="140" y="338" fill="#052E16" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Asset</text>
+  <text x="140" y="364" fill="#14532D" font-family="Inter, Arial, sans-serif" font-size="14">artifact</text>
+  <text x="388" y="338" fill="#FAF5FF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Publish</text>
+  <text x="388" y="364" fill="#F3E8FF" font-family="Inter, Arial, sans-serif" font-size="14">schedule</text>
+  <text x="258" y="506" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">Run log</text>
+</svg>

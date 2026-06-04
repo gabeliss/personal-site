@@ -23,7 +23,7 @@ export default function Experience() {
                 Expedia Group
               </h3>
               <p className="text-lg text-[--color-accent] font-medium">
-                Software Development Engineer
+                Software Development Engineer II
               </p>
               <div className="flex flex-wrap gap-4 text-sm text-[--color-muted] mt-1">
                 <span className="flex items-center gap-1">
@@ -96,6 +96,17 @@ export default function Experience() {
                 <span className="text-[--color-accent]">Impact:</span> Reduced mean time to resolution
                 by providing actionable summaries that previously required manual analysis of multiple
                 event logs.
+              </p>
+            </div>
+
+            {/* Datadog On-Call */}
+            <div className="bg-[--color-bg-alt] rounded-xl p-6 border border-[--color-border]">
+              <h4 className="text-xl font-semibold text-[--color-primary] mb-3">
+                Datadog On-Call Integration
+              </h4>
+              <p className="text-[--color-secondary] leading-relaxed">
+                Led a large part of the migration from PagerData to Datadog On-Call for Expedia's
+                incident routing workflows, integrating automated escalation into the event management system.
               </p>
             </div>
 
