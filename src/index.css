@@ -1,44 +1,33 @@
 @import "tailwindcss";
 
-/*
-  Global Color Theme
-  Edit these CSS custom properties to change the entire site's color scheme
-*/
 :root {
-  /* Primary colors */
-  --color-primary: #0f172a;       /* slate-900 - main text */
-  --color-secondary: #334155;     /* slate-700 - secondary text */
-  --color-muted: #64748b;         /* slate-500 - muted text */
-
-  /* Background colors */
-  --color-bg: #ffffff;            /* white - main background */
-  --color-bg-alt: #f8fafc;        /* slate-50 - alternate background */
-  --color-bg-card: #ffffff;       /* white - card background */
-
-  /* Accent colors */
-  --color-accent: #0ea5e9;        /* sky-500 - links, highlights */
-  --color-accent-hover: #0284c7;  /* sky-600 - hover state */
-
-  /* Border colors */
-  --color-border: #e2e8f0;        /* slate-200 - borders */
-  --color-border-hover: #cbd5e1;  /* slate-300 - border hover */
+  --color-primary: oklch(22% 0.022 252);
+  --color-secondary: oklch(35% 0.026 252);
+  --color-muted: oklch(53% 0.028 252);
+  --color-bg: oklch(97.5% 0.012 82);
+  --color-bg-alt: oklch(93.5% 0.016 82);
+  --color-bg-card: oklch(99% 0.008 82);
+  --color-accent: oklch(58% 0.145 246);
+  --color-accent-hover: oklch(47% 0.148 246);
+  --color-warm: oklch(72% 0.145 72);
+  --color-border: oklch(82% 0.018 252);
+  --color-border-hover: oklch(69% 0.028 252);
+  --surface-line: color-mix(in oklch, var(--color-border) 70%, transparent);
 }
 
-/* Dark mode */
 .dark {
-  --color-primary: #f1f5f9;       /* slate-100 - main text */
-  --color-secondary: #cbd5e1;     /* slate-300 - secondary text */
-  --color-muted: #94a3b8;         /* slate-400 - muted text */
-
-  --color-bg: #0f172a;            /* slate-900 - main background */
-  --color-bg-alt: #1e293b;        /* slate-800 - alternate background */
-  --color-bg-card: #1e293b;       /* slate-800 - card background */
-
-  --color-accent: #38bdf8;        /* sky-400 - links, highlights */
-  --color-accent-hover: #7dd3fc;  /* sky-300 - hover state */
-
-  --color-border: #334155;        /* slate-700 - borders */
-  --color-border-hover: #475569;  /* slate-600 - border hover */
+  --color-primary: oklch(94% 0.018 252);
+  --color-secondary: oklch(78% 0.026 252);
+  --color-muted: oklch(64% 0.03 252);
+  --color-bg: oklch(17% 0.028 252);
+  --color-bg-alt: oklch(21% 0.032 252);
+  --color-bg-card: oklch(24% 0.034 252);
+  --color-accent: oklch(73% 0.145 226);
+  --color-accent-hover: oklch(82% 0.12 226);
+  --color-warm: oklch(78% 0.13 72);
+  --color-border: oklch(34% 0.038 252);
+  --color-border-hover: oklch(45% 0.045 252);
+  --surface-line: color-mix(in oklch, var(--color-border) 70%, transparent);
 }
 
 @theme inline {
@@ -50,28 +39,32 @@
   --color-bg-card: var(--color-bg-card);
   --color-accent: var(--color-accent);
   --color-accent-hover: var(--color-accent-hover);
+  --color-warm: var(--color-warm);
   --color-border: var(--color-border);
   --color-border-hover: var(--color-border-hover);
 }
 
-/* Base styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
   background-color: var(--color-bg);
+  background-image:
+    linear-gradient(var(--surface-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--surface-line) 1px, transparent 1px);
+  background-size: 44px 44px;
   color: var(--color-primary);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.25;
+  letter-spacing: 0;
 }
 
 a {
@@ -84,13 +77,11 @@ a:hover {
   color: var(--color-accent-hover);
 }
 
-/* Selection */
 ::selection {
   background-color: var(--color-accent);
-  color: white;
+  color: oklch(98% 0.01 82);
 }
 
-/* Animations */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -119,4 +110,34 @@ a:hover {
 
 .animate-fade-in-local {
   animation: fade-in-local 0.15s ease-out;
+}
+
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-rise {
+  animation: hero-rise 780ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.section-shell {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.hairline {
+  border-color: var(--surface-line);
+}
+
+@media (max-width: 720px) {
+  .section-shell {
+    width: min(100% - 32px, 1180px);
+  }
 }

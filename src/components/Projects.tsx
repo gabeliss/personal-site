@@ -114,77 +114,76 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 px-8 bg-[--color-bg-alt]">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-[--color-primary] mb-4 text-center">
-          Projects
-        </h2>
-        <p className="text-[--color-muted] text-center mb-12 max-w-2xl mx-auto">
-          Selected full-stack, AI, and mobile projects built outside work.
-        </p>
+    <section id="projects" className="border-b hairline bg-[--color-bg-alt]/75 py-24">
+      <div className="section-shell">
+        <div className="mb-14 grid gap-6 border-b hairline pb-8 lg:grid-cols-[0.55fr_1fr]">
+          <h2 className="text-[clamp(2.5rem,6vw,5.5rem)] font-extrabold leading-none text-[--color-primary]">
+            Selected work
+          </h2>
+          <p className="max-w-2xl text-xl leading-relaxed text-[--color-secondary]">
+            Full-stack products, internal systems, and mobile apps built around complex data, real users, and fast iteration.
+          </p>
+        </div>
 
-        <div className="space-y-16">
+        <div>
           {projects.map((project, index) => (
             <AnimatedSection key={project.name} delay={index * 100}>
               <div
-                className={`flex flex-col ${
-                  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                } gap-8 lg:gap-12 items-center p-6 rounded-2xl transition-all duration-300 hover:bg-[--color-bg] hover:shadow-lg hover:-translate-y-1`}
+                className="group grid gap-8 border-b hairline py-12 transition-colors duration-300 lg:grid-cols-[0.42fr_0.58fr]"
               >
-              {/* Image */}
-              <div className="w-full lg:w-2/5 flex-shrink-0 flex justify-center">
-                <div className="relative group">
-                  <div className="absolute -inset-4 bg-[--color-accent] rounded-3xl opacity-20 group-hover:opacity-30 blur-xl transition-opacity"></div>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[8px] border hairline bg-[--color-bg-card]">
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="relative w-48 h-48 md:w-56 md:h-56 rounded-2xl shadow-md object-cover"
+                    className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
                   />
-                </div>
               </div>
 
-              {/* Content */}
-              <div className="w-full lg:w-3/5">
-                <h3 className="text-2xl font-bold text-[--color-primary] mb-2">
-                  {project.name}
-                </h3>
-                <p className="text-[--color-accent] font-medium mb-3">
-                  {project.tagline}
-                </p>
-                <p className="text-[--color-secondary] mb-4 leading-relaxed">
+              <div className="flex flex-col justify-center">
+                <div className="mb-5 flex items-baseline justify-between gap-6">
+                  <div>
+                    <p className="mb-2 text-sm font-bold text-[--color-muted]">
+                      0{index + 1}
+                    </p>
+                    <h3 className="text-3xl font-extrabold text-[--color-primary] md:text-4xl">
+                      {project.name}
+                    </h3>
+                  </div>
+                  <p className="hidden max-w-xs text-right text-base font-bold text-[--color-accent] md:block">
+                    {project.tagline}
+                  </p>
+                </div>
+                <p className="max-w-3xl text-lg leading-relaxed text-[--color-secondary]">
                   {project.description}
                 </p>
 
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="mt-6 flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-sm bg-[--color-bg] text-[--color-secondary] rounded-full border border-[--color-border]"
+                      className="rounded-lg border hairline bg-[--color-bg-card]/75 px-3 py-1.5 text-sm font-semibold text-[--color-secondary]"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                {/* Highlights */}
-                <ul className="text-sm text-[--color-muted] mb-6 space-y-1">
+                <ul className="mt-7 grid gap-2 text-sm font-medium text-[--color-muted] md:grid-cols-2">
                   {project.highlights.map((highlight) => (
-                    <li key={highlight} className="flex items-start gap-2">
-                      <span className="text-[--color-accent] mt-1">-</span>
+                    <li key={highlight} className="flex items-start gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[--color-warm]"></span>
                       {highlight}
                     </li>
                   ))}
                 </ul>
 
-                {/* Links */}
-                <div className="flex gap-3 items-center">
+                <div className="mt-8 flex flex-wrap items-center gap-3">
                   {project.links.website && (
                     <a
                       href={project.links.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 text-sm rounded-lg bg-[--color-primary] text-white hover:bg-[--color-secondary] transition-colors"
+                      className="inline-flex items-center gap-2 rounded-lg bg-[--color-primary] px-4 py-2.5 text-sm font-bold text-[--color-bg] transition-transform duration-300 hover:-translate-y-0.5"
                     >
                       <ExternalLink size={16} />
                       Website
@@ -195,7 +194,7 @@ export default function Projects() {
                       href={project.links.appStore}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 text-sm rounded-lg border border-[--color-border] text-[--color-primary] hover:border-[--color-border-hover] hover:bg-[--color-bg] transition-colors"
+                      className="inline-flex items-center gap-2 rounded-lg border hairline bg-[--color-bg-card]/75 px-4 py-2.5 text-sm font-bold text-[--color-primary] transition-transform duration-300 hover:-translate-y-0.5"
                     >
                       <Apple size={16} />
                       App Store
@@ -205,16 +204,14 @@ export default function Projects() {
                     <div className="relative">
                       <button
                         onClick={handlePendingClick}
-                        className="flex items-center gap-2 px-4 py-2 text-sm rounded-lg border border-[--color-border] hover:border-[--color-border-hover] hover:bg-[--color-bg] transition-colors cursor-pointer"
-                        style={{ color: '#0ea5e9' }}
+                        className="inline-flex cursor-pointer items-center gap-2 rounded-lg border hairline bg-[--color-bg-card]/75 px-4 py-2.5 text-sm font-bold text-[--color-primary] transition-transform duration-300 hover:-translate-y-0.5"
                       >
                         <Apple size={16} />
                         App Store
                       </button>
                       {showPendingToast && (
                         <span
-                          className="absolute left-0 top-full mt-2 whitespace-nowrap px-3 py-1.5 text-sm rounded-lg shadow-lg z-10"
-                          style={{ backgroundColor: '#0f172a', color: '#ffffff' }}
+                          className="absolute left-0 top-full z-10 mt-2 whitespace-nowrap rounded-lg bg-[--color-primary] px-3 py-1.5 text-sm text-[--color-bg] shadow-lg"
                         >
                           Pending App Store review
                         </span>
