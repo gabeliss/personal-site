@@ -38,7 +38,7 @@ function App() {
                 I'm a software engineer at Expedia, working on observability and internal infrastructure systems. I graduated from the University of Michigan in 2023 and am looking for software engineering roles in NYC or remote.
               </p>
               <p>
-                Outside work, I spend a lot of time building personal projects, exploring new technologies, and shipping apps to the App Store.
+                Outside work, I spend a lot of time building personal projects and exploring new technologies.
               </p>
             </div>
             <Projects />
