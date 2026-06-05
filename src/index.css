@@ -1,44 +1,31 @@
 @import "tailwindcss";
 
-/*
-  Global Color Theme
-  Edit these CSS custom properties to change the entire site's color scheme
-*/
 :root {
-  /* Primary colors */
-  --color-primary: #0f172a;       /* slate-900 - main text */
-  --color-secondary: #334155;     /* slate-700 - secondary text */
-  --color-muted: #64748b;         /* slate-500 - muted text */
-
-  /* Background colors */
-  --color-bg: #ffffff;            /* white - main background */
-  --color-bg-alt: #f8fafc;        /* slate-50 - alternate background */
-  --color-bg-card: #ffffff;       /* white - card background */
-
-  /* Accent colors */
-  --color-accent: #0ea5e9;        /* sky-500 - links, highlights */
-  --color-accent-hover: #0284c7;  /* sky-600 - hover state */
-
-  /* Border colors */
-  --color-border: #e2e8f0;        /* slate-200 - borders */
-  --color-border-hover: #cbd5e1;  /* slate-300 - border hover */
+  --color-primary: oklch(18% 0.01 255);
+  --color-secondary: oklch(39% 0.012 255);
+  --color-muted: oklch(55% 0.012 255);
+  --color-bg: oklch(97.5% 0.003 255);
+  --color-bg-alt: oklch(94% 0.004 255);
+  --color-panel: oklch(97.5% 0.003 255);
+  --color-accent: oklch(55% 0.21 28);
+  --color-accent-hover: oklch(47% 0.21 28);
+  --color-on-accent: oklch(97.5% 0.003 255);
+  --color-border: oklch(78% 0.01 255);
+  --color-border-hover: oklch(65% 0.012 255);
 }
 
-/* Dark mode */
 .dark {
-  --color-primary: #f1f5f9;       /* slate-100 - main text */
-  --color-secondary: #cbd5e1;     /* slate-300 - secondary text */
-  --color-muted: #94a3b8;         /* slate-400 - muted text */
-
-  --color-bg: #0f172a;            /* slate-900 - main background */
-  --color-bg-alt: #1e293b;        /* slate-800 - alternate background */
-  --color-bg-card: #1e293b;       /* slate-800 - card background */
-
-  --color-accent: #38bdf8;        /* sky-400 - links, highlights */
-  --color-accent-hover: #7dd3fc;  /* sky-300 - hover state */
-
-  --color-border: #334155;        /* slate-700 - borders */
-  --color-border-hover: #475569;  /* slate-600 - border hover */
+  --color-primary: oklch(98% 0.003 255);
+  --color-secondary: oklch(88% 0.004 255);
+  --color-muted: oklch(73% 0.004 255);
+  --color-bg: oklch(15% 0.006 255);
+  --color-bg-alt: oklch(19% 0.006 255);
+  --color-panel: oklch(15% 0.006 255);
+  --color-accent: oklch(61% 0.24 28);
+  --color-accent-hover: oklch(70% 0.2 28);
+  --color-on-accent: oklch(15% 0.006 255);
+  --color-border: oklch(32% 0.006 255);
+  --color-border-hover: oklch(48% 0.006 255);
 }
 
 @theme inline {
@@ -47,31 +34,31 @@
   --color-muted: var(--color-muted);
   --color-bg: var(--color-bg);
   --color-bg-alt: var(--color-bg-alt);
-  --color-bg-card: var(--color-bg-card);
+  --color-panel: var(--color-panel);
   --color-accent: var(--color-accent);
   --color-accent-hover: var(--color-accent-hover);
+  --color-on-accent: var(--color-on-accent);
   --color-border: var(--color-border);
   --color-border-hover: var(--color-border-hover);
 }
 
-/* Base styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background-color: var(--color-bg);
   color: var(--color-primary);
-  line-height: 1.6;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.05;
+  letter-spacing: 0;
 }
 
 a {
@@ -84,13 +71,186 @@ a:hover {
   color: var(--color-accent-hover);
 }
 
-/* Selection */
 ::selection {
   background-color: var(--color-accent);
-  color: white;
+  color: var(--color-on-accent);
 }
 
-/* Animations */
+.section-shell {
+  margin-inline: auto;
+  max-width: 72rem;
+  padding: 4rem 1.25rem;
+}
+
+.social-link {
+  color: var(--color-primary);
+  display: inline-flex;
+}
+
+.social-link:hover {
+  color: var(--color-accent);
+}
+
+.project-item {
+  align-items: flex-start;
+  display: flex;
+  gap: 0.9rem;
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding-inline: 2rem;
+  }
+}
+
+.section-heading {
+  max-width: 45rem;
+}
+
+.section-heading h2 {
+  margin-top: 0.75rem;
+  max-width: 40rem;
+  font-size: 2.25rem;
+  line-height: 1.05;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.section-heading p:not(.eyebrow) {
+  margin-top: 1rem;
+  max-width: 42rem;
+  color: var(--color-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.eyebrow {
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.primary-link,
+.quiet-link,
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: border-color 160ms ease, background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.primary-link {
+  gap: 0.5rem;
+  background: var(--color-primary);
+  color: var(--color-bg);
+  padding: 0.7rem 1rem;
+}
+
+.primary-link:hover {
+  background: var(--color-secondary);
+  color: var(--color-bg);
+  transform: translateY(-1px);
+}
+
+.quiet-link {
+  gap: 0.5rem;
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  padding: 0.7rem 1rem;
+}
+
+.quiet-link:hover,
+.icon-link:hover {
+  border-color: var(--color-border-hover);
+  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.project-row {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.5rem 0;
+}
+
+.project-media img {
+  aspect-ratio: 1;
+  width: 5rem;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+}
+
+.project-copy h3 {
+  color: var(--color-primary);
+  font-size: 1.375rem;
+  font-weight: 650;
+}
+
+.project-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-link {
+  height: 2.25rem;
+  width: 2.25rem;
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+}
+
+.status-pill {
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+}
+
+.inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+.inline-link:hover {
+  color: var(--color-primary);
+}
+
+.experience-line {
+  border-top: 1px solid var(--color-border);
+  color: var(--color-secondary);
+  line-height: 1.7;
+  padding-top: 1rem;
+}
+
+@media (min-width: 720px) {
+  .project-row {
+    grid-template-columns: 6rem 1fr auto;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem 0;
+  }
+
+  .project-media img {
+    width: 6rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .section-heading h2 {
+    font-size: 3rem;
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
