@@ -1,3 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <text y=".9em" font-size="90">G</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#f8fafc"/>
+  <rect x="3" y="3" width="58" height="58" rx="12" fill="none" stroke="#e2483f" stroke-width="4"/>
+  <text
+    x="32"
+    y="39"
+    fill="#111827"
+    font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-size="24"
+    font-weight="700"
+    letter-spacing="-1"
+    text-anchor="middle"
+  >GL</text>
 </svg>
