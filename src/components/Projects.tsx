@@ -13,6 +13,7 @@ const projects: Project[] = [
     name: 'Content Engine',
     sentence: 'In-progress AI workflow studio for building reusable content automation pipelines.',
     image: '/images/content-engine-mark.svg',
+    website: 'https://www.content-engine.dev/',
   },
   {
     name: 'Rewinded',
