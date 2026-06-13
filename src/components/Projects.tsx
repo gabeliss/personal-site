@@ -16,6 +16,12 @@ const projects: Project[] = [
     website: 'https://www.content-engine.dev/',
   },
   {
+    name: 'Caravan Trip Plan',
+    sentence: 'Camping trip planner with dynamic itinerary generation, campground selection, route previews, and archived real-time availability/pricing.',
+    image: '/images/caravan.jpg',
+    website: 'https://caravan-trip-plan.vercel.app/',
+  },
+  {
     name: 'Rewinded',
     sentence: 'iOS app that turns camera rolls into collaborative, shareable visual stories.',
     image: '/images/rewinded.jpeg',
@@ -35,12 +41,6 @@ const projects: Project[] = [
     image: '/images/dreamdex.png',
     website: 'https://www.dreamdexapp.com/',
     appStore: 'https://apps.apple.com/us/app/dreamdex/id6752360041',
-  },
-  {
-    name: 'Caravan Trip Plan',
-    sentence: 'RV trip planner with real-time campground availability and Stripe checkout.',
-    image: '/images/caravan.jpg',
-    website: 'https://caravan-trip-plan.vercel.app/',
   },
 ];
 
