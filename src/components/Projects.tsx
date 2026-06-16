@@ -35,13 +35,6 @@ const projects: Project[] = [
     website: 'https://www.getmindmend.com/',
     appStore: 'https://apps.apple.com/us/app/mindmend-habit-tracker/id6753316303',
   },
-  {
-    name: 'DreamDex',
-    sentence: 'Dream journaling app with voice recording, AI analysis, and generated imagery.',
-    image: '/images/dreamdex.png',
-    website: 'https://www.dreamdexapp.com/',
-    appStore: 'https://apps.apple.com/us/app/dreamdex/id6752360041',
-  },
 ];
 
 export default function Projects() {
