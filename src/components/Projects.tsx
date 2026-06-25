@@ -11,7 +11,7 @@ type Project = {
 const projects: Project[] = [
   {
     name: 'Content Engine',
-    sentence: 'In-progress AI workflow studio for building reusable content automation pipelines.',
+    sentence: 'Building an AI agent for content creation.',
     image: '/images/content-engine-mark.svg',
     website: 'https://www.content-engine.dev/',
   },
